@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f8f9f9;
+}
+
+.custom-btn-primary {
+  background-image: linear-gradient(to right, #7fe4ff, #25aae1, #7fe4ff, #25aae1);
+  background-size: 300% 100%;
+
+  &:hover {
+    background-position: 100% 0;
+  }
+}
+.custom-btn-secondary {
+  background-image: linear-gradient(to right, rgb(200, 150, 224), rgb(124, 48, 159), rgb(200, 150, 224), rgb(124, 48, 159));
+  background-size: 300% 100%;
+
+  &:hover {
+    background-position: 100% 0;
+  }
+}
+.custom-btn-outline-primary {
+  background-image: linear-gradient(to right, transparent, transparent, #7fe4ff, #25aae1);
+  background-size: 300% 100%;
+
+  &:hover {
+    background-position: 100% 0;
+  }
+}
+
+.custom-nav-link {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, rgb(31 41 55), rgb(31 41 55), #7fe4ff, #25aae1);
+  background-size: 300% 100%;
+  &:hover {
+    background-position: right;
+  }
+}
+
+.custom-bg-home {
+  background-image: url('./assets/home-bg.png');
+  background-size: 600px 360px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.custom-highlight-text {
+  display: inline-block;
+  background-image: linear-gradient(to right, rgb(5, 103, 254), rgb(200, 150, 224), rgb(5, 103, 254), rgb(200, 150, 224));
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-animation 5s infinite;
+  font-weight: 700;
+}
+@keyframes text-animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@media (max-width: 1279px) {
+  .custom-bg-home {
+    background-size: 450px 270px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .custom-bg-home {
+    background-size: 360px 216px;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-bg-home {
+    background-size: 270px 162px;
+  }
+}
